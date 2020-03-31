@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const host = '0.0.0.0';
 const app = express();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer);
@@ -69,7 +70,7 @@ io.on("connection", function(socket){
 
 port = process.env.port || 5000;
 
-httpServer.listen(port, function(){
+httpServer.listen(port,host, function(){
     console.log("Run in port: "+port);;
 })
 
