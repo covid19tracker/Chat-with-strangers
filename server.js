@@ -20,9 +20,6 @@ io.on("connection", function(socket){
                     socket.name = data.name;
                     socket.pairing = "";
                     list[data.name] = socket;
-        
-                    console.table(list)
-    
                     for(var key in list){
                         el = list[key];
                         if(socket.name != el.name && el.pairing == "" ){

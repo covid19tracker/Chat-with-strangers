@@ -110,7 +110,7 @@ socket.on("out", function(){
     note("Your friend escaped");
 })
 socket.on("sendMess", function(data){
-    Appchat.addItem(data);
+    Appchat.addItem(data, true);
 })
 socket.on("resultSubmitName", function(data){
     if(data.r == 0){
