@@ -18,7 +18,8 @@ Vue.component('chat-item', {
 var load = new Vue({
     el : "#loading",
     data : {
-        show : false
+        show : false,
+        text : "Waiting"
     }
 })
 var Appchat = new Vue({
@@ -119,6 +120,7 @@ socket.on("resultSubmitName", function(data){
         note("Name already exists");
     }else if( data.r == 2){
         load.show = true;
+        load.text = "Waiting for pairing";
     }
 });
 function note(body){
