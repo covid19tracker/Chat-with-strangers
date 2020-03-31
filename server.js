@@ -68,7 +68,7 @@ io.on("connection", function(socket){
     });
 });
 
-port = process.env.port || 5000;
+port = process.env.PORT || 5000;
 
 httpServer.listen(port,host, function(){
     console.log("Run in port: "+port);;
